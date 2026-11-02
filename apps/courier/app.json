@@ -1,0 +1,68 @@
+{
+  "expo": {
+    "name": "Маршрут",
+    "slug": "marshrut-courier",
+    "version": "0.9.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "backgroundColor": "#0e7c66"
+    },
+    "android": {
+      "package": "ru.marshrut.courier",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0e7c66"
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "ru.marshrut.courier",
+      "supportsTablet": false
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Камера нужна для сканирования штрихкодов и фото посылок при вручении."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Геопозиция нужна, чтобы подставить адрес доставки и предлагать курьерам ближайшие заказы."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Камера нужна для фото посылки при вручении."
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-notifications",
+        {
+          "color": "#0e7c66"
+        }
+      ]
+    ],
+    "extra": {
+      "apiUrl": "https://api.marshrut.ru/api",
+      "devApiUrl": "",
+      "brandName": "Маршрут",
+      "brandColor": "#0e7c66",
+      "eas": {
+        "projectId": ""
+      }
+    },
+    "scheme": "marshrut"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "marshrut",
+  "private": true,
+  "version": "0.9.0",
+  "description": "Маршрут — облачная система для курьерских служб и складов (white-label)",
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev -w apps/api",
+    "dev:web": "npm run dev -w apps/web",
+    "build": "npm run build -w apps/api && npm run build -w apps/web",
+    "db:generate": "npm run db:generate -w apps/api",
+    "db:seed": "npm run db:seed -w apps/api",
+    "dev:courier": "npm run start --prefix apps/courier"
+  }
+}
